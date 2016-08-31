@@ -1,0 +1,142 @@
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato/Regular/Lato-Regular.eot");
+  src: url("../fonts/Lato/Regular/Lato-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Lato/Regular/Lato-Regular.woff") format("woff"),
+    url("../fonts/Lato/Regular/Lato-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato/Italic/LatoItalic.eot");
+  src: url("../fonts/Lato/Italic/LatoItalic.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Lato/Italic/LatoItalic.woff") format("woff"),
+    url("../fonts/Lato/Italic/LatoItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato/Bold/LatoBold.eot");
+  src: url("../fonts/Lato/Bold/LatoBold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Lato/Bold/LatoBold.woff") format("woff"),
+    url("../fonts/Lato/Bold/LatoBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+body{
+  font-family: "Lato", Arial, sans-serif;
+}
+
+.wrapper {
+	width: 100%;
+}
+
+.page_centered {
+  margin: 0 auto;
+}
+
+.multiple_tab {
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  color: #2a535d;
+  font-weight: 700;
+  padding: 10px 0;
+}
+
+#container {
+  margin: 0 auto;
+}
+
+#container input {
+  height: 30px;
+  visibility: hidden;
+}
+
+#container label {
+  cursor: pointer;
+  display: block;
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  margin: 0;
+  padding: 0 1.5em;
+  text-align: center;
+  border: 1px solid #d1caca;
+}
+
+#container input:hover + label {
+  background: #ddd;
+  color: #666;
+}
+
+#container input:checked + label {
+  background: #1d977d;
+  color: #fff;
+  z-index: 6;
+}
+
+#content-1,
+#content-2,
+#content-3,
+#content-4 {
+  border: 1px solid #d1caca;
+  line-height: 1.5;
+  min-height: 130px;
+}
+
+#content {
+  position: relative;
+  z-index: 5;
+  margin-top: -5px;
+}
+
+#content div {
+  opacity: 0;
+  padding: 1.5em;
+  position: absolute;
+  z-index: -100;
+}
+
+#content-1 p {
+  clear: both;
+  margin-bottom: 1em;
+}
+#content-1 p.left img {
+  float: left;
+  margin-right: 1em;
+}
+#content-1 p.last {
+  margin-bottom: 0;
+}
+
+#content-2 p {
+  float: left;
+  width: 48.5%;
+}
+#content-2 p.column-right {
+  margin-left: 3%;
+}
+#content-2 p img {
+  display: block;
+  margin: 0 auto 1em auto;
+}
+#content-3 p,
+#content-3 ul {
+  margin-bottom: 1em;
+}
+#content-3 ul {
+  margin-left: 2em;
+}
+
+#container input#tab-1:checked ~ #content #content-1,
+#container input#tab-2:checked ~ #content #content-2,
+#container input#tab-3:checked ~ #content #content-3,
+#container input#tab-4:checked ~ #content #content-4{
+  opacity: 1;
+  z-index: 100;
+}
