@@ -1,24 +1,32 @@
 function setName() {
 	var names = [];
-	var currentName;
-	for (var i = 0; i < 5; i++) {
-		currentName = prompt('Enter name', '');
-		names.push(currentName);
-	}
-	return names;
-}
-
-function checkName() {
-	var names = setName();
-	var currentName = prompt('Enter your name', currentName);
-
-	if (names.indexOf(currentName) >= 0) {
-    alert(currentName + ', вы успешно вошли');
-  } else {
-    alert('Ты кто?');
+  var currentName, access;
+	var i = 0;
+	while (i < 3) {
+    currentName = prompt('Enter name', '');
+    if (currentName != '') {
+		  names.push(currentName);
+      i++; 
+	  } else {
+      alert ('Try to enter your name again');
+    }
   }
-	return names;
+  
+  var enterName = prompt('Enter your name', enterName);
+  
+	names.forEach(function(item, i) {
+		if (names.indexOf(enterName) < 0) {
+			return access = false;
+		} else {
+      return access = true;
+		}
+	})
+  
+  return access ? enterName + ', вы успешно вошли!' : 'Ты кто?';
+  
 }
 
-console.log(checkName());
+alert(setName());
+
+
 
