@@ -33,9 +33,6 @@ var generateDOM = {
 		this.tasksItems.className = 'list';
 		this.question.appendChild(this.tasksItems);
 
-		
-
-
 		answer.forEach(function (item, i, answer) {
 			console.log('li')
 			this.answerItem = document.createElement('li');
@@ -54,7 +51,14 @@ var generateDOM = {
 			this.pElem.innerHTML = item;
 			this.answerItem.appendChild(this.pElem);
 		}.bind(this))
+	},
+	button: function () {
+		this.button = document.createElement('a');
+		this.button.className = 'check-button';
+		this.button.innerHTML = 'Проверить мои результаты';
+		this.section.appendChild(this.button);
 	}
+
 }
 
 var questionsData = [{
@@ -119,6 +123,7 @@ function createDom () {
 		}
 		generateDOM.addTask(questionsData[i].title, massArr);
 	}
+	generateDOM.button();
 };
 
 createDom ();
