@@ -5,9 +5,9 @@ function setName() {
 	while (i < 5) { 
 		currentName = prompt('Enter name', ''); 
 		if (currentName === null) {
-			return;
-		}
-		if (currentName !== ''){
+			return null;
+		} 
+		else if (currentName !== ''){
 			names.push(currentName); 
 			i++; 
 		} else {
@@ -20,6 +20,11 @@ function setName() {
 function checkName() {
 	var names = setName();
 	var access = true;
+  
+  if (names === null) {
+  	alert('Отмена');
+    return;
+  }
   
   while(access) {
   	var currentName = prompt('Enter your name', currentName);
