@@ -1,0 +1,49 @@
+.wrapper {
+	font-family: 'Baloo Chettan', cursive;
+	font-size: 16px;
+	text-align: center;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+	height: 100vh;
+	background-color: #39cccc;
+}
+
+.main {
+	padding: 2em 0;
+	border: 2px solid black;
+	border-radius: 10px;
+	width: 50%;
+	margin: 0 auto;
+	background-color: #7fdbff;
+}
+
+.title {
+	font-size: 6em;
+}
+
+.time {
+ 	padding: .4em;
+ 	font-size: 5em;
+}
+
+.button {
+	cursor: pointer;
+	display: inline-block;
+	border: 2px solid black;
+	border-radius: 10px;
+	padding: .2em .5em;
+	font-size: 1.5em;
+	margin: 0 .4em;
+}
+
+.start {
+	background-color: #3D9970;
+}
+
+.reset {
+	background-color: #FF4136;
+}
