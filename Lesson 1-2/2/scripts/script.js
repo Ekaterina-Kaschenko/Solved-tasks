@@ -4,6 +4,9 @@ function setName() {
 	var i = 0;
 	while (i < 5) { 
 		currentName = prompt('Enter name', ''); 
+		if (currentName === null) {
+			return;
+		}
 		if (currentName !== ''){
 			names.push(currentName); 
 			i++; 
