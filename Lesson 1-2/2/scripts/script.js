@@ -2,7 +2,7 @@ function setName() {
 	var names = [];
 	var currentName;
 	var i = 0;
-	while (i < 2) { 
+	while (i < 5) { 
 		currentName = prompt('Enter name', ''); 
 		if (currentName !== ''){
 			names.push(currentName); 
@@ -16,11 +16,12 @@ function setName() {
 
 function checkName() {
 	var names = setName();
+	var access = true;
   
-  while(true) {
+  while(access) {
   	var currentName = prompt('Enter your name', currentName);
   
-    if (currentName === '') {
+    if (currentName === '' ) {
       alert('you should enter name');
     } else if (names.indexOf(currentName) >= 0) {
       alert(currentName + ', вы успешно вошли');

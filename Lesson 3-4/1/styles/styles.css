@@ -1,0 +1,22 @@
+.wrapper {
+	font: normal 16px sans-serif;
+}
+
+.section {
+	width: 80%;
+  margin: 0 auto;
+}
+
+.title {
+	font-size: 24px;
+	text-align: center;
+	font-weight: normal;
+}
+
+ul .item {
+	list-style-type: none;
+}
+    
+ul.list {
+	padding-left: 0;
+}
