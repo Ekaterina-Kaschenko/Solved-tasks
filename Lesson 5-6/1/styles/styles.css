@@ -69,3 +69,22 @@
 .clear {
 	background-color: #e05038;
 }
+
+.time__item {
+	display: inline-block;
+}
+
+.time-wrapper {
+	width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ms-element {
+	justify-content: flex-end;
+}
+
+.ms {
+	font-size: .5em;
+}
