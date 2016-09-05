@@ -27,7 +27,7 @@
 
 .time {
  	padding: .4em;
- 	font-size: 5em;
+ 	font-size: 3em;
 }
 
 .button {
@@ -38,6 +38,11 @@
 	padding: .2em .5em;
 	font-size: 1.5em;
 	margin: 0 .4em;
+	width: 6em;
+	-webkit-user-select: none; 
+  -moz-user-select: none;   
+  -ms-user-select: none; 
+  user-select: none;  
 }
 
 .start {
@@ -46,4 +51,21 @@
 
 .reset {
 	background-color: #FF4136;
+}
+
+.continue,
+.pause {
+	display: none;
+}
+
+.continue {
+	background-color: #9068be;
+}
+
+.pause {
+	background-color: #e62739;
+}
+
+.clear {
+	background-color: #e05038;
 }
