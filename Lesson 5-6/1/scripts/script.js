@@ -53,7 +53,7 @@ Timer.prototype = {
   	this.pauseTime = Date.now();
   },
   continue: function () {
-  	this.startTime = new Date(this.startTime - (this.pauseTime - Date.now()));
+  	this.currentTime = new Date(this.currentTime - (this.pauseTime - Date.now()));
   	this.updateTime();
   	
   },
