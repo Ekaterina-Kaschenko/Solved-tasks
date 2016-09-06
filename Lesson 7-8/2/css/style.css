@@ -30,38 +30,18 @@
 
 body{
   font-family: "Lato", Arial, sans-serif;
-  font-size: 16px;
-  background-color: #FDF3E7;
-}
-
-.tabs {
-  width: 60%;
-  min-height: 20em;
-  margin: 0 auto;
-  border: 2px double #3B3738;
-  margin-top: 2em;
-  background-color: #fff;
 }
 
 .tabs__item {
   display: inline-block;
-  transition: all 0.5s ease; 
+  padding: 10px 20px;
+  border: 1px solid #000;
 }
 
 .tabs a.current{
-/*   border-color: #ccc; */
+  border-color: #ccc;
   border-top: 2px solid #f00;
   background: #fff;
-}
-
-.tabs__item a:hover {
-  transition: all 0.5s ease;
-  color: #558C89;
-
-}
-
-.tabs-content {
-  padding: .5em;
 }
 
 .tabs-content > div {
@@ -70,19 +50,8 @@ body{
 
 .tabs-content > div:first-child{
   display: block;
-
 }
 
 a {
   display: block;
-  color: #191919;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-top: none;
-}
-
-ul {
-  padding: .5em;
-  background-color: #f6f6f6;
-  padding-bottom: 0;
 }
