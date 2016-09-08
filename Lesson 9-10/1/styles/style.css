@@ -35,6 +35,14 @@ nav ul li {
 }
 
 /* sub navigation */
+ul, li, a {
+	z-index: 100;
+}
+
+.jcarousel-wrapper {
+	z-index: 1;
+}
+
 nav li ul {    
     background-color:rgb(225,75,75);
     position:absolute;
@@ -87,16 +95,12 @@ ul.sub-menu {
 }
 
 /* show arrows for dropdowns */
-nav li.dropdown > a {
-    background-image:url('../img/arrow-down.png');
-    background-position:right 20px;
-    background-repeat:no-repeat;
+nav li.dropdown > a:after {
+   content: " \25bc";
 }
 
-nav li li.dropdown > a {
-    background-image:url('../img/arrow-right.png');
-    background-position:right 16px;
-    background-repeat:no-repeat;
+nav li li.dropdown > a:after {
+   content: " \25b6";
 }
 /* end nav */
 

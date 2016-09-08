@@ -3,7 +3,7 @@ $(document).ready(function(){
      forceiOS: true,
   });
 
-  jQuery(".tasks-list-item").mousedown(function() {
+  jQuery(".tasks-list-item").change(function() {
     changeCheck(jQuery(this));
   });
 
@@ -13,17 +13,12 @@ $(document).ready(function(){
 
   function changeCheck(el) {
     var icon = $(el[0].querySelector('.niceCheck'));
-    console.log(icon);
-   
     input = $(el[0].querySelector('input'));
-    console.log(input);
-    
-    if(!input.attr("checked")) {
-      input.attr("checked", true);
+
+    if(!input.prop("checked")) {
       icon.css("background-position","0 -17px");
     } else {
       icon.css("background-position","0 0");    
-      input.attr("checked", false)
     }
     return true;
   }
@@ -33,15 +28,22 @@ $(document).ready(function(){
           
     input = $(el[0].querySelector('input'));
     if(input.attr("checked")) {
-      console.log(1)
       icon.css("background-position","0 0");    
     } else {
-      console.log(2)
       icon.css("background-position","0 -17px");  
     }
     
     return true;
   }
 
+  $( '.dropdown' ).hover(
+    function(){
+      $(this).children('.sub-menu').slideDown(200);
+    },
+    function(){
+      $(this).children('.sub-menu').slideUp(200);
+    }
+  );
+  
 })
 
