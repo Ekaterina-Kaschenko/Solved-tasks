@@ -1,30 +1,47 @@
 $(document).ready(function(){
-  function createLayout(input, tip) {
-    var $input = $(input),
-        container = $input.closest('div');
-    if (container.hasClass('form__item') && container.find('div.tip').length > 0) {
-      return;
-    }
+  $('.items').fancySelect({
+     forceiOS: true,
+  });
 
-    container.addClass('form__item');
-    var elem = document.createElement('div');
-    $(elem).addClass('tip').html(tip); 
-    container.append(elem);
-    return elem;
+  jQuery(".tasks-list-item").mousedown(function() {
+    changeCheck(jQuery(this));
+  });
+
+  jQuery(".tasks-list-item").each(function() {
+    changeCheckStart(jQuery(this));
+  });
+
+  function changeCheck(el) {
+    var icon = $(el[0].querySelector('.niceCheck'));
+    console.log(icon);
+   
+    input = $(el[0].querySelector('input'));
+    console.log(input);
+    
+    if(!input.attr("checked")) {
+      input.attr("checked", true);
+      icon.css("background-position","0 -17px");
+    } else {
+      icon.css("background-position","0 0");    
+      input.attr("checked", false)
+    }
+    return true;
+  }
+    
+  function changeCheckStart(el) {
+    var icon = $(el[0].querySelector('.niceCheck'));
+          
+    input = $(el[0].querySelector('input'));
+    if(input.attr("checked")) {
+      console.log(1)
+      icon.css("background-position","0 0");    
+    } else {
+      console.log(2)
+      icon.css("background-position","0 -17px");  
+    }
+    
+    return true;
   }
 
-  $('input').on('mouseover', function () {
-    var tip = $(this).prop('title');
-    createLayout(this, tip);
-  });
-  
-  $('input').on('mouseleave', function () {
-  var cont = $(this).closest('div.form__item');
-  console.log('mouse leave', cont);
-    if (cont.count < 0) {
-      return;
-    }
-
-    cont.find('div.tip').remove();
-  });
 })
+
