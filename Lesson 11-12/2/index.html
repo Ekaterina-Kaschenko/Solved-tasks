@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="EN">
+	<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="address=no" />
+	</head>
+	<body>
+    <div class="wrapper">
+      <div class="content">
+        
+      </div>
+    </div>
+    <script type="text/template" id='userTemplate'>
+     <h1 class="title"><%=name%></h1>
+      <div class="picture">
+        <img src="<%=photo%>" alt="Это мое фото">
+        <p class="text"><%=job%></p>
+      </div>
+      <hr>
+      <p class="header">Хочу учить фронтенд, потому что:</p>
+      <ul class="list">
+        <% for (var i = 0; i < reasons.length; i++) { %>
+          <li class="list__item"><%=reasons[i]%></li>
+        <% } %>
+      </ul>
+      <hr>
+      <p class="header">Мой контактный телефон:</p>
+      <p class="text"><%=phone%></p>
+      <p class="header">Мой профиль вконтакте</p>
+      <p class="text"><a href="<%=vk%>">vk.com/id8904746</a></p>
+      <hr>
+      <p class="header">Мой фидбек</p>
+      <p class="text"><%=feedback%></p>
+    </script>
+    <script type="text/javascript" src="./vendor/john.js"></script>
+    <script type="text/javascript" src='./scripts/script.js'></script>
+  </body>
+</html>
