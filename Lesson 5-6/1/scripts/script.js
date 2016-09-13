@@ -1,6 +1,7 @@
 'use strict';
 
-function Timer () {
+(function () {
+  function Timer () {
   this.element = {}
   this.getElements();
   this.element.start.addEventListener('click', function () {
@@ -82,8 +83,10 @@ Timer.prototype = {
     this.element.intervar = '100'
   }
 
-};
+  };
 
 
-var timer = new Timer ();
-console.log(timer)
+  var timer = new Timer ();
+  console.log(timer)
+
+})();
