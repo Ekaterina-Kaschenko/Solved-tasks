@@ -16,6 +16,7 @@
 
 ul .item {
 	list-style-type: none;
+  padding: 5px 0;
 }
     
 ul.list {
@@ -41,4 +42,8 @@ ul.list {
 .check-button:hover {
 	background-color: #ADD8E6;
 	transition: all .2s ease;
+}
+
+.test-result {
+  font-size: 50px;
 }
