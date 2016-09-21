@@ -5,7 +5,14 @@
 	var container = document.getElementsByClassName('container')[0];
 
 	button.addEventListener('click', function () {
-		apiRequest();
+		if (input.value.trim() === '') {
+			container.innerHTML = '';
+			input.value = '';
+			alert ('Введите поисковой запрос');
+		} else {
+			apiRequest();
+		}
+		
 	});
 
 	input.addEventListener('keydown', function (event) {
@@ -17,10 +24,13 @@
 	input.addEventListener('keyup', function (event) {
 		event = event || window.event;
 		if (event.keyCode == 13) {
-	    apiRequest();
-		}
-		if (input.value === '') {
-		  container.innerHTML = '';
+			if (input.value.trim() === '') {
+			  container.innerHTML = '';
+			  input.value = '';
+			  alert ('Введите поисковой запрос');
+			} else {
+				apiRequest();
+			}
 		}
 
 	});
