@@ -1,0 +1,64 @@
+@import "variables";
+
+.service {
+  background-color: $darkGrey;
+  color: #fff;
+  padding: 40px 0 60px;
+
+  &__item {
+    width: 23%;
+    margin-top: 50px;
+    &-content {
+      position: relative;
+
+      .icon {
+        display: none;
+      }
+    }
+
+    &-content:before {
+      content: '';
+      display: block;
+      opacity: .8;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition: .1s ease all;
+    }
+
+    &:hover .service__item-content:before {
+      background-color: #2487e4;
+      cursor: pointer;
+      transition: .1s ease all;
+    }
+
+    &:hover .service__title {
+      color: $yellow;
+      transition: .1s ease all;
+    }
+    
+    &:hover .icon {
+      display: block;
+      position: absolute;
+      top: 45%;
+      left: 45%;
+      color: #fff;
+
+      & .fa {
+        color: #fff;
+      }
+    }
+
+  }
+
+  &__title {
+    font-size: 16px;
+    padding-top: 25px;
+    text-align: center;
+  }
+  & img {
+    width: 100%;
+  }
+}

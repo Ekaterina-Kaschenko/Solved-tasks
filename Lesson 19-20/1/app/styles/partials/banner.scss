@@ -1,0 +1,36 @@
+@import "variables";
+
+.banner {
+  margin-bottom: 30px;
+  position: relative;
+
+  &__title {
+    position: absolute;
+    top: 200px;
+    left: 30px;
+    width: 250px;
+  }
+
+  &__item {
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 52px;
+    background-color: rgba(0, 0, 0, .8);
+    padding: 0 20px;
+
+    &-active {
+      color: $yellow;
+    }
+  }
+
+  &__item:first-child {
+    padding-top: 20px;
+  }
+
+  &__item:last-child {
+    padding-bottom: 20px;
+  }
+}

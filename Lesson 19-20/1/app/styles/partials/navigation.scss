@@ -1,0 +1,36 @@
+@import "variables";
+
+.navigation {
+  background-color: $darkGrey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__link {
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 20px;
+    border: 1px solid #181a1d;
+    font-weight: 700;
+
+    &:hover {
+      color: #cc9919;
+    }
+
+    &-active {
+      background-color: #248cec;
+      color: #fff;
+      border: 1px solid transparent;
+    }
+  }
+
+  // &__link
+}

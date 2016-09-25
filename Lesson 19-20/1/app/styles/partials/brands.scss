@@ -1,0 +1,13 @@
+.brands {
+  padding: 95px 0;
+
+  &__item {
+    opacity: .8;
+    transition: .2s all ease;
+
+    &:hover {
+      opacity: 1;
+      transition: .2s all ease;
+    }
+  }
+}

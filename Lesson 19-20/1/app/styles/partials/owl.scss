@@ -1,0 +1,34 @@
+.owl {
+  &-item {
+    position: relative;
+  }
+
+  &-controls {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  &-demo .item img {
+    display: block;
+    width: 100%;
+
+  }
+
+  &-page {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 4px solid #fff;
+    margin: 0 8px;
+
+    &.active {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-color: #000
+    }
+  }
+}

@@ -1,4 +1,3 @@
-console.log('hello');
 $(document).ready(function() {
  
   $("#owl-demo").owlCarousel({
@@ -24,4 +23,5 @@ $(document).ready(function() {
       content.slideDown(function(){title.addClass('is-opened')});
     } 
   });
+
 });

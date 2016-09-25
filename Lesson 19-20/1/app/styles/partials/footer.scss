@@ -1,0 +1,46 @@
+@import "variables";
+
+.contacts {
+  background-color: $darkGrey;
+  padding: 60px 0 80px;
+
+  &__title {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    padding-bottom: 20px;
+  }
+
+  &__list {
+    li:not(:last-of-type) {
+      border-bottom: 1px solid #393c40;
+    }
+
+    &-item {
+      color: #797a7c;
+      text-decoration: none;
+      line-height: 2;
+      padding-bottom: 5px;
+
+      &:hover {
+        color: #248cec;
+      }
+    }
+  }
+}
+
+.footer {
+  &__contacts {
+    background-color: #35383c;
+    color: #797a7c;
+    padding: 20px 0;
+
+    &-item {
+      display: flex;
+
+      p {
+        padding-right: 30px;
+      }
+    }
+  }
+}
