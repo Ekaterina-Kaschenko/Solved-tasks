@@ -47,5 +47,6 @@ const questionsData = [{
       isRight: true
     }]
   }
-]
+];
 
+export default questionsData;
