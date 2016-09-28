@@ -42,31 +42,31 @@ class Test{
   };
 
   checkCorrectAnswer() {
-    let self = this;
+    // let self = this;
     let allAnswers = questionsData.length;
     let answer = this.localStorageInit(questionsData);
     let inputs = Array.prototype.slice.call(document.getElementsByClassName('answer'));
     let checkButton =  document.getElementsByClassName('check-button')[0];
-    checkButton.addEventListener('click', function () {
-      self.countAnswer = 0;
-      self.correctAnswers = new Array(questionsData.length);
-      inputs.forEach(function (el) {
+    checkButton.addEventListener('click', () => {
+      this.countAnswer = 0;
+      this.correctAnswers = new Array(questionsData.length);
+      inputs.forEach( el => {
         let dataQuestion = el.getAttribute('data-question');
         let dataId = el.getAttribute('data-id');
         let answer = questionsData[dataQuestion].answers[dataId];
 
-        if (answer.isRight && el.checked && self.correctAnswers[dataQuestion] !== false) {
-          self.correctAnswers[dataQuestion] = true;
+        if (answer.isRight && el.checked && this.correctAnswers[dataQuestion] !== false) {
+          this.correctAnswers[dataQuestion] = true;
         } else if (answer.isRight && !el.checked || !answer.isRight && el.checked) {
-          self.correctAnswers[dataQuestion] = false;
+          this.correctAnswers[dataQuestion] = false;
         }
       });
 
-      for (let i = 0; i < self.correctAnswers.length; i++) {
-        if (!self.correctAnswers[i]) {
-          self.countAnswer = self.countAnswer;
+      for (let i = 0; i < this.correctAnswers.length; i++) {
+        if (!this.correctAnswers[i]) {
+          this.countAnswer = this.countAnswer;
         } else {
-          self.countAnswer++;
+          this.countAnswer++;
         }
       }
     });
