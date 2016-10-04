@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Template</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="address=no" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="todo-app">
+        <header class="header">
+          <h1 class="title">
+            Todos
+          </h1>
+          <input class="new-todo" placeholder="What needs to be done?" autofocus="" />
+        </header>
+        <section class="main">
+          <span class="toggle-all">❯</span>
+          <label for="toggle-all"></label>
+          <fieldset class="todo-list">
+
+          </fieldset>
+        </section>
+        <footer class="footer">
+          <span class="todo-count"><span class="counter">0</span> item left</span>
+            <ul class="filters">
+              <li>
+                <a href="#" class="filters__item all-items">All</a>
+              </li>
+              <li>
+                <a href="#" class="filters__item active-item">Active</a>
+              </li>
+              <li>
+                <a href="#" class="filters__item completed-item">Completed</a>
+              </li>
+            </ul>
+            <span class="clear">Clear completed</span>
+        </footer>
+      </section>
+    </div>
+   <script src="./vendor/require.js"></script>
+   <script src="./scripts/main.js"></script>
+  </body>
+</html>
